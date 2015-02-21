@@ -1,71 +1,5 @@
 var mysql=require('mysql'),
 connection= mysql.createConnection({user:'root',password : '',database:"nekretnine_project_baza"});
-/*
- var data=[ 
-     { 
-     oglasi_nk: 
-     { id_users_nk: 17,
-       naslov: '20m2, Stan, Vukov spomenik',
-       opis: 'NOVOGRADNJA, KLIMA, KTV, INTERNET, TELEFON, INTERFON, I sprat, cg. ',
-       oglasivac: 2,
-       kategorija: 1,
-       prodaja_izdavanje: 2,
-       datum_kreiranja_oglasa: '2015-02-12' },
-    lokacija: { mesto: '1', deo_mesta: '2009', lokacija: '10446' },
-    slike: 
-     { slika_1: 'http://www.albatrosnekretnine.com/uploadSlike/966598slika4_e0231313-6b1e-4a95-b4a3-75f01309a47f_source_662x497.jpg',
-       slika_2: 'http://www.albatrosnekretnine.com/uploadSlike/612719slika3_5e5122ad-c65a-490c-93d5-fe7d5c886a75_source_662x497.jpg',
-       slika_3: 'http://www.albatrosnekretnine.com/uploadSlike/380863slika5_cba4ec21-7fd7-4746-aff6-a05c6e61d6a9_source_662x497.jpg',
-       slika_4: 'http://www.albatrosnekretnine.com/uploadSlike/107723slika6_c971d0a5-0c5f-411e-8b11-c92503584751_source_662x497.jpg' },
-    vrsta_oglasa: 
-     { vrsta_oglasa: 1,
-       datum_postavljanja_oglasa: '2015-02-12',
-       datum_isteka: '2015-03-17 11:53:34',
-       datum_azuriranja: '2015-02-12' },
-    dodatni_podatci: {},
-    dodatno: { cena: 200, broj_soba: 1, kvadratura: 20 },
-    xml_engine: { sifra: '19851', id_users_nk: 17,'engine':'albatros' } 
-},
-{ oglasi_nk: 
-     { id_users_nk: 17,
-       naslov: '53m2, Stan, Vukov spomenik',
-       opis: 'VUKOV SPOMENIK, NOVOGRADNJA, KLIMA, KTV, INTERNET, INTERFON, TELEFON, V sprat, cg.',
-       oglasivac: 2,
-       kategorija: 1,
-       prodaja_izdavanje: 2,
-       datum_kreiranja_oglasa: '2014-10-30' },
-    lokacija: { mesto: '1', deo_mesta: '2009', lokacija: '10446' },
-    slike: 
-     { slika_1: 'http://www.albatrosnekretnine.com/uploadSlike/67279220141027153339T1414659394_540c.jpg',
-       slika_2: 'http://www.albatrosnekretnine.com/uploadSlike/9165920141027153357T1414659471_540c.jpg',
-       slika_3: 'http://www.albatrosnekretnine.com/uploadSlike/72784520141027153259T1414659454_540c.jpg',
-       slika_4: 'http://www.albatrosnekretnine.com/uploadSlike/33375920141027153230T1414659431_540c.jpg' },
-    vrsta_oglasa: 
-     { vrsta_oglasa: 1,
-       datum_postavljanja_oglasa: '2014-10-30',
-       datum_isteka: '2015-03-17 14:53:23',
-       datum_azuriranja: '2014-10-30' },
-    dodatni_podatci: {},
-    dodatno: { cena: 300, broj_soba: 1, kvadratura: 20 },
-    xml_engine: { sifra: '17804', id_users_nk: 17, engine: 'albatros' } 
-},
-
-    ]
-
-
-   
-
-
-
-
-
-
-
-
- 
-IUD(data)
-*/
-
 
  
 
@@ -412,12 +346,12 @@ function IUD(data,callback) {
  * @returns {Function|undefined}
  * 
  * 
- * ova funkcija je komplikovana zato sto je nejasno kako sam ovo napravio
- * NI SAM NE ZNAM KAKO OVO RADI!!!!!!!!*******!!!!!!
+ * komplikovano ali radi!!!!!!!*******!!!!!!
  * OPIS:
  * -----
  * Funkcija uzima sve keys od objecta data(param#1)
  * vraca function koja koja generise query za svaki object(data) key value par,
+ * koristi se unutar transakcije!!!!!!!!
  * 
  * Pogledati inline comments;
  * 
